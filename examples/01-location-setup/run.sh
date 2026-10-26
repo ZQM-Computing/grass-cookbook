@@ -2,8 +2,8 @@
 # 01-location-setup: create a throwaway location and import a synthetic raster.
 # All GRASS commands run inside ONE session via inner.sh: a --tmp-location
 # is fresh per invocation, so splitting commands across invocations loses state.
-set -e
-DIR="$(cd "$(dirname "$0")" && pwd)"
+set -euo pipefail
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 grass --tmp-location EPSG:3857 --exec bash "$DIR/inner.sh"
 # Failure behavior:
 # - Unknown EPSG code or missing grass binary: grass exits before inner.sh runs.
