@@ -15,7 +15,7 @@ A **GRASS cookbook** for geoscientific analysis, terrain, and watershed modeling
 
 ## Repository role and status
 
-**Status:** Active, public — seeding. Pattern passes land in follow-up work from fleet-verified setups; the tables below list what is planned, not what is already written.
+**Status:** Active, public — first pattern pass written (design-only, gate 1 target; runtime validation pending).
 
 **What this repository is:** GRASS patterns — see the table below.
 
@@ -33,21 +33,25 @@ GIS analysts who need GRASS's analytical depth behind a scriptable interface.
 - A location/mapset for your study area, or the sample data in the first pattern
 - Bash
 
-## Patterns (planned)
+## Patterns
 
-| # | Example | What it will demonstrate |
-|---|---------|--------------------------|
-| 01 | `01-location-setup` | Creating a location and mapset, importing rasters and vectors |
-| 02 | `02-raster-analysis` | Map algebra and neighborhood analysis |
-| 03 | `03-watershed` | Watershed delineation and flow accumulation |
-| 04 | `04-vector-overlay` | Vector overlay, buffering, and attribute joins |
-| 05 | `05-python-scripting` | Driving GRASS from Python scripts |
+| # | Example | Status | What it demonstrates |
+|---|---------|--------|----------------------|
+| 01 | [01-location-setup](examples/01-location-setup/README.md) | Written | Creating a location and mapset, importing rasters and vectors |
+| 02 | [02-raster-analysis](examples/02-raster-analysis/README.md) | Written | Map algebra and neighborhood analysis |
+| 03 | [03-watershed](examples/03-watershed/README.md) | Written | Watershed delineation and flow accumulation |
+| 04 | [04-vector-overlay](examples/04-vector-overlay/README.md) | Written | Vector overlay, buffering, and attribute joins |
+| 05 | [05-python-scripting](examples/05-python-scripting/README.md) | Written | Driving GRASS from Python scripts |
 
 ## Repository layout
 
 ```text
 grass-cookbook/
-├── examples/          # pattern passes, landing in follow-up work
+├── examples/01-location-setup/
+├── examples/02-raster-analysis/
+├── examples/03-watershed/
+├── examples/04-vector-overlay/
+├── examples/05-python-scripting/
 ├── README.md
 └── LICENSE
 ```
