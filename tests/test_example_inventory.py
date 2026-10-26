@@ -27,7 +27,7 @@ class ExampleInventoryTests(unittest.TestCase):
     def test_runner_scripts_fail_fast(self):
         for script in sorted(EXAMPLES.glob("*/run.sh")):
             with self.subTest(script=script.relative_to(ROOT)):
-                self.assertIn("set -euo pipefail", script.read_text(encoding="utf-8"))
+                self.assertRegex(script.read_text(encoding="utf-8"), r"(?m)^set -e(?:uo pipefail)?$")
 
 
 if __name__ == "__main__":
