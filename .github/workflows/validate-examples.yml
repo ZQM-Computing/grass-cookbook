@@ -25,7 +25,7 @@ jobs:
           done < <(find examples -type f -name '*.sh' -print0)
       - name: Parse XML fixtures
         run: |
-          python - <<'PY'
+          python3 - <<'PY'
           from pathlib import Path
           from xml.etree import ElementTree
 
